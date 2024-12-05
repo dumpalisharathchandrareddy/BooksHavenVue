@@ -26,8 +26,21 @@ export default {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
     gap: 0px 20px;
-    grid-template-areas: "project-item-1 project-item-2 project-item-3";
-    width: 80%;
+    /* grid-template-areas: "project-item-1 project-item-2 project-item-3"; */
+    width: 90%;
     margin: auto;
+    }
+
+    @media screen and (max-width: 950px){
+        .books-list{
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+
+    }
+    @media screen and (max-width: 750px){
+        .books-list{
+            grid-template-columns: 1fr;
+        }
     }
 </style>

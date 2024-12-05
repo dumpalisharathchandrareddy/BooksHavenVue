@@ -4,7 +4,6 @@
             <img class="book-img" :src="book.image" />
         </div>
         <h2 class="book title">{{book.title}}</h2>
-        <!-- <p class="book author"> - {{book.author}}</p> -->
         <p class="book summary">{{book.summary}}</p>
         <p class="book author"> - {{book.author}}</p>
         <div class="tags">
@@ -28,31 +27,36 @@
 
 <style scoped>
     .book-details{
-    padding: 20px;
-    background-color: white;
-    line-height: 1.5rem;
-    border-radius: 8px;
-    margin-bottom: 1rem;
-    /* border: solid #3F51B5; */
-    background-color: #454b6c;
-    color: #FFF;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 0.1fr auto .1fr .1fr;
+        padding: 20px;
+        background-color: white;
+        line-height: 1.5rem;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+        /* border: solid #3F51B5; */
+        background-color: #70b0ba;
+        
     }
     .title {
         text-align: center;
-    margin: 0.5rem 0;
-    text-transform: uppercase;
-    color: burlywood;
+        margin: 0.5rem 0;
+        text-transform: uppercase;
+        color: rgb(231, 62, 102);
+        min-height: 2rem;
     }
     .author {
         text-align: right;
-    font-size: 0.8rem;
-    color: #FFF;
-    font-weight: bold;
+        font-size: 0.8rem;
+        color: #223630;
+        font-weight: bold;
     }
     .summary{
         font-size: 0.85rem;
         text-align: justify;
         margin: 0.5rem 0;
+        min-height: 100px;
     }
     .img-container{
         width: 100%;
@@ -60,24 +64,57 @@
     }
     .img-container img{
         width: 100%;
-        max-height: 425px;
-    object-fit: cover;
+        height:500px;
+    object-fit:cover;
     border-radius: 8px;
     border: 2px solid #000;
     }
     .tags {
-        display: flex;
-        justify-content: space-around;
-    margin: 0.5rem 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 0.5rem;
+        justify-content: center;
+        margin: 0.5rem 0;
+    
+    
     }
 
     .genre, .publication_date, .rating_review{
         color: #000;
-    background-color: #FFF;
-    padding: 5px 10px;
-    border-radius: 10px;
-    font-size: 0.8rem;
-    letter-spacing: 1px;
-    font-weight: bold;
+        background-color: #FFF;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+        font-weight: bold;
+        text-align: center;
+        max-height: 35px;
+        overflow: auto;
+
+    }
+
+    @media screen and (max-width: 1200px) {
+        .book-details {
+            padding: 15px;
+
+        }
+        .title {
+            font-size: 1.5rem;
+        }
+        .author {
+            font-size: 0.7rem;
+        }
+        .summary {
+            font-size: 0.8rem;
+        }
+        .tags {
+            font-size: 0.8rem;
+        }
+        .genre, .publication_date, .rating_review{
+            padding: 3px 5px;
+            font-size: 0.75em;
+        }
+
+        
     }
 </style>

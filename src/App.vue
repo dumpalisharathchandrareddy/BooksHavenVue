@@ -1,18 +1,21 @@
 <template>
   <MyHeader appName="BOOK HAVEN"/> 
   <BooksList :books=books />
+  <MyFooter />
 </template>
 
 <script>
 import MyHeader from './components/MyHeader.vue';
 import BooksList from './components/BooksList.vue';
+import MyFooter from './components/MyFooter.vue';
 
 
 export default{
   name: 'App',
   components:{
     MyHeader,
-    BooksList
+    BooksList,
+    MyFooter
   },
   data(){
     return {

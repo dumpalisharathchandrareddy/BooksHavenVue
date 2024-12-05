@@ -59,15 +59,4 @@ export default {
     margin: auto;
 }
 
-@media screen and (max-width: 950px) {
-    .books-list {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media screen and (max-width: 750px) {
-    .books-list {
-        grid-template-columns: 1fr;
-    }
-}
 </style> -->

@@ -44,7 +44,8 @@
         margin: 0.5rem 0;
         text-transform: uppercase;
         color: rgb(231, 62, 102);
-        min-height: 2rem;
+        min-height: 3rem;
+        overflow:auto;
     }
     .author {
         text-align: right;
